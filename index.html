@@ -5,23 +5,7 @@
 <script src="https://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
 </head>
 <body>
- <div class="main"></div>
-<script>
- if (window.XMLHttpRequest){
-        // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行的代码
-        xmlhttp=new XMLHttpRequest();
- }else{    
-        //IE6, IE5 浏览器执行的代码
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-  xmlhttp.onreadystatechange=function(){
-        if (xmlhttp.readyState==4 && xmlhttp.status==200){
-            $(".main").html(xmlhttp.responseText);
-        }
-    }
-  if(location.search!="")xmlhttp.open("GET","index_php.php?"+location.search,true);
-  else xmlhttp.open("GET","index_php.php?lang=en",true);
-    xmlhttp.send();
- </script>
-</body>
+ <div class="main">
+ <script type="text/javascript" src="index_php.php?lang=en"></script>
+ </div>
 </html>
